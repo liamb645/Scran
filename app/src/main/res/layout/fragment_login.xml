@@ -2,34 +2,103 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical">
+    android:gravity="center_vertical"
+    android:background="@color/DarkCyan"
+    android:weightSum="1">
 
-    <EditText
-        android:id = "@+id/inputemail"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:inputType = "textEmailAddress"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:backgroundTint="@color/DarkCyan"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id = "@+id/inputpassword"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:inputType="textWebPassword"
-        android:backgroundTint="@color/DarkCyan"
-        />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="182dp"
+            android:layout_height="182dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:src="@mipmap/ic_launcher" />
+    </RelativeLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign in"
-        android:layout_gravity="center_horizontal"
-        />
+        android:layout_weight="0.18"
+        android:background="@color/teal"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/inputemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="@color/WhiteSmoke"
+            android:fontFamily="sans-serif"
+            android:hint="Enter email here"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColorHint="@color/Silver" />
+
+        <EditText
+            android:id="@+id/inputpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="@color/WhiteSmoke"
+            android:fontFamily="sans-serif"
+            android:hint="Enter password here"
+            android:inputType="textWebPassword"
+            android:textAlignment="center"
+            android:textColorHint="@color/Silver" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.35"
+            android:text="Log in" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dont have an account? Create an account by clicking the register now button below."
+            android:textAlignment="center"
+            android:textColor="@color/DarkGray" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="95dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Register now"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/tvTermsCondiontions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By ticking this box I agree to the terms and conditions "
+            android:textAlignment="center"
+            android:textColor="@color/DarkGray" />
+
+        <CheckBox
+            android:id="@+id/cbTermsConditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:buttonTint="@color/Silver"
+            android:text="CheckBox"
+            android:textAlignment="center"
+            android:textColor="@color/Silver"
+
+            />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>
